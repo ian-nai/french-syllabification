@@ -243,7 +243,7 @@ def detect_syllables():
 
 #     rows = zip(word_test, stringed_syls, syls_list)
 
-#     with open("TESTING.csv", "w") as f:
+#     with open("testing.csv", "w") as f:
 #         writer = csv.writer(f)
 #         for row in rows:
 #             writer.writerow(row)
