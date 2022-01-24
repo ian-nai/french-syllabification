@@ -19,7 +19,7 @@ def detect_syllables():
     stringed_syls = []
     data_trimmed = data.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 
-    word_test = data_trimmed['word'].values.tolist()
+    word_trimmed = data_trimmed['word'].values.tolist()
     actual_syls = data_trimmed['syls_real'].values.tolist()
     for x in actual_syls:
         stringed_syls.append(str(x))
@@ -35,7 +35,7 @@ def detect_syllables():
 
 
 
-    for w in word_test:
+    for w in word_trimmed:
         end_of_string_counter = 0
         two_cons_counter = 0
         print(w)
@@ -241,7 +241,7 @@ def detect_syllables():
 #     accuracy = ((len(index_corr) / len(syls_list)))
 #     print('accuracy percent: ' + str(accuracy))
 
-#     rows = zip(word_test, stringed_syls, syls_list)
+#     rows = zip(word_trimmed, stringed_syls, syls_list)
 
 #     with open("testing.csv", "w") as f:
 #         writer = csv.writer(f)
