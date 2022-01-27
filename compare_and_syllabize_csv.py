@@ -271,13 +271,12 @@ def detect_syllables():
     print('correct number: ' + str(len(index_corr)))
     accuracy = ((len(index_corr) / len(syls_list)))
     print('accuracy percent: ' + str(accuracy))
-
+    '''
     rows = zip(word_trimmed, stringed_syls, syls_list)
 
-    with open("testing.csv", "w") as f:
+    with open("syllable_counts.csv", "w") as f:
         writer = csv.writer(f)
         for row in rows:
             writer.writerow(row)
-    '''
-
+    
 detect_syllables()
