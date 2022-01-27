@@ -9,14 +9,12 @@ def indexes(word,letter):
          if x == letter:
              yield i
 
-#syl_lexique
-#syllables_acc
-
 def detect_syllables():
 
     predefined_words = pandas.read_csv("syl_lexique.csv", sep=r'\s*,\s*',
                                header=0, encoding='utf-8', engine='python')
-
+    
+    # Use a different csv here to check against the predetermined values
     data = pandas.read_csv("syl_lexique.csv", sep=r'\s*,\s*',
                                header=0, encoding='utf-8', engine='python')
 
@@ -38,7 +36,6 @@ def detect_syllables():
         stringed_syls.append(str(x))
 
     print(stringed_syls)
-    word_trimmed.append('butter')
 
 
     vowels = ['a', 'e', 'i', 'o', 'u', 'y','à', 'â', 'æ', 'œ', 'é', 'è', 'ê', 'ë', 'î', 'ï', 'ô', 'ù', 'û', 'ü', 'ÿ']
@@ -51,10 +48,10 @@ def detect_syllables():
 
     for word in word_trimmed:
         syls = 0
-        index_to_match = list_of_predefined_words.index(word)
-        syl_count = predefined_syls[index_to_match]
 
         if word in list_of_predefined_words:
+            index_to_match = list_of_predefined_words.index(word)
+            syl_count = predefined_syls[index_to_match]
             syls = syl_count
             syls_list.append(str(syls))
 
