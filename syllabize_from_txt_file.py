@@ -16,7 +16,7 @@ def indexes(word,letter):
 # Using NLTK's default French stopwords
 default_stopwords = set(nltk.corpus.stopwords.words('french'))
 
-# Our input file
+# Our input file - substitute the file name for your own .txt
 input_file = ['beauverie.txt']
 
 lines_cleaned = []
