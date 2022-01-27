@@ -308,7 +308,7 @@ def detect_syllables():
 
     rows = zip(complete_text, syls_list)
 
-    with open("testing.csv", "w") as f:
+    with open("syllable_counts.csv", "w") as f:
         writer = csv.writer(f)
         for row in rows:
             writer.writerow(row)
