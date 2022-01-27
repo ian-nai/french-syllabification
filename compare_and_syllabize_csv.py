@@ -278,11 +278,6 @@ def detect_syllables():
         writer = csv.writer(f)
         for row in rows:
             writer.writerow(row)
-
-        # with open('syllables_count.csv','a') as fd:
-        #     for x in syls_list:
-        #         fd.write(str(x))
-
     '''
 
 detect_syllables()
